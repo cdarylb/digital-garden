@@ -1,5 +1,3 @@
-# Open Source Intelligence
-
 OSINT (Open Source Intelligence) refers to the collection and analysis of publicly available information. This data comes from various sources, including the internet, social media, public databases, and government records.
 
   
