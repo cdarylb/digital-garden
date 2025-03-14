@@ -1,8 +1,8 @@
 ---
-title: Welcome to Qurtz
+title: Welcome to my digital garden
 ---
 
-![[lp.png]]
+![[lp2.png]]
 
 Hello mate! This is me, MrXcrypt, and welcome to my digital garden.
 
