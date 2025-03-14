@@ -2,7 +2,7 @@
 title: Welcome to my digital garden 🌿
 ---
 
-![[lp2.png]]
+![[lp3.png]]
 
 Hello mate! This is me, MrXcrypt, and welcome to my digital garden.
 
