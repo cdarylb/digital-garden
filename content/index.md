@@ -2,7 +2,7 @@
 title: Welcome to my digital garden 🌿
 ---
 
-![[lp4.png]]
+![[lp3.png]]
 
 Hey dude ! Welcome to my digital garden !
 
