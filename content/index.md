@@ -6,7 +6,7 @@ title: Welcome to my digital garden 🌿
 
 Hey dude ! Welcome to my digital garden !
 
-This is the place I use to keep track of my notes because my head is already way too full to remember everything. These are mostly the notes I take—though not always regularly—on a few areas of interest :
+This is the place I use to keep track of my notes because my head is already way too full to remember everything. These are mostly the notes I take —though not always regularly— on a few areas of interest :
 
 - OSINT & social engineering
 - Linux
