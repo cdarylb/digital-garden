@@ -4,15 +4,14 @@ title: Welcome to my digital garden 🌿
 
 ![[lp3.png]]
 
-Hello mate! This is me, MrXcrypt, and welcome to my digital garden.
+Hey dude ! Welcome to my digital garden !
 
-This space is a curated archive of my study notes, research, and explorations in Cybersecurity. I also include my medium blogs here which are free in medium. You can view my medium blogs over here.
+This is the place I use to keep track of my notes because my head is already way too full to remember everything. These are mostly the notes I take—though not always regularly—on a few areas of interest :
 
-It’s a growing repository where I document what I learn, break things apart, and put them back together—sometimes better, sometimes just to understand them deeper.
+- OSINT & social engineering
+- Linux
+- Pentesting
 
-My interests revolve around:
+I'll probably add more stuff over time—I have no idea how these notes will evolve, but at least they exist, allowing me to refer back to them. And who knows, they might even be useful to others besides me.
 
-Cyber Threat Intelligence – Tracking threat actors, scams, and financial fraud.
-OSINT & Social Engineering – Gathering intelligence from the wild.
-Cybercrime Research – Understanding fraud at scale.
-This digital garden is my evolving map of knowledge—scattered, structured, and always growing. Feel free to explore! 🚀
+Cyril
