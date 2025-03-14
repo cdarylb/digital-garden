@@ -1,5 +1,5 @@
 ---
-title: Welcome to my digital garden 🌿
+title: My digital garden 🌿
 ---
 
 ![[lp4.png]]
