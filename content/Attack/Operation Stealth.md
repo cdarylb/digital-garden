@@ -1,7 +1,7 @@
 # Stealth Scanning with Nmap
 
 ```bash
-nmap -sS -T2 -Pn --scan-delay 500ms --max-retries 2 --host-timeout 10m -oN scan_discret.txt cible.com
+nmap -sS -T2 -Pn --scan-delay 500ms --max-retries 2 --host-timeout 10m -oN scan_discret.txt example.com
 ```
 
 - **Stealth scan (-sS)** to avoid establishing a full connection.
