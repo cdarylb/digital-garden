@@ -1,5 +1,3 @@
-# Phases of a Penetration Test
-
 
 ## 1. Reconnaissance
 The reconnaissance phase involves gathering information about the target to identify potential attack vectors.
