@@ -1,6 +1,6 @@
 # Note 3: Using Nmap with Plugins (NSE Scripts)
 
-The **Nmap Scripting Engine (NSE)** allows users to write and execute custom scripts for vulnerability detection, network auditing, and exploitation.
+The **Nmap Scripting Engine ** allows users to write and execute custom scripts for vulnerability detection, network auditing, and exploitation...
 
 ## Scanning for Common Vulnerabilities
 
