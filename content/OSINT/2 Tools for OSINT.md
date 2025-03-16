@@ -10,6 +10,7 @@ Reviewed: 4
 - **[The Wayback Machine](https://web.archive.org/)** → Access old versions of websites.
 - **[Whois Lookup](https://who.is/)** → Retrieve information about domain owners.
 - **[Hunter.io](https://hunter.io/)** → Find email addresses associated with a domain.
+- **[Criminal IP](https://www.criminalip.io/fr/)** → Designed to collect and analyze threat intelligence by gathering real-time data on more than 4.2 billion IP addresses and cyber assets.
 
 ---
 
