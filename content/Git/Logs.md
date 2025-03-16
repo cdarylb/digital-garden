@@ -1,4 +1,3 @@
-## Maîtriser les logs Git : options et affichages avancés
 
 ### Affichage de base des logs
 ```sh

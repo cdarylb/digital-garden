@@ -1,4 +1,3 @@
-## Commandes de base Git
 
 ### Configuration initiale
 ```sh

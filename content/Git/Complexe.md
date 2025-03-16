@@ -1,4 +1,3 @@
-## Commandes avancées Git
 
 ### Modification de l'historique
 #### Modifier le dernier commit
