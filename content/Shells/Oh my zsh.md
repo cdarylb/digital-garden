@@ -1,7 +1,3 @@
-# Oh My Zsh - Notes
-
-## Introduction
-
 Oh My Zsh (OMZ) is a powerful framework for managing the Zsh shell configuration. It provides themes, plugins, and extensive customization options.
 
 ---
