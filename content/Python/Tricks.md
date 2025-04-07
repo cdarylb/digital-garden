@@ -6,17 +6,17 @@ sudo apt install python3-venv
 ```
 
 ### Création d'un environnement virtuel
-Dans le répertoire de votre projet, créer un environnement virtuel avec la commande :
+Créer un environnement virtuel avec la commande :
 ```sh
 python3 -m venv .venv
 ```
 
 ### Activation de l'environnement virtuel
-Activer l'environnement virtuel en exécutant :
+Activer l'environnement virtuel :
 ```sh
 source .venv/bin/activate
 ```
-Cela modifie la variable d'environnement `PATH` pour inclure `.venv/bin/`.
+modifie la variable d'environnement `PATH` pour inclure `.venv/bin/`.
 
 ### Installation de packages avec `pip`
 Une fois l'environnement activé, installer des packages depuis PyPI avec :
