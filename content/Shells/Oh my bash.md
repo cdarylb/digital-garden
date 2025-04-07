@@ -7,7 +7,7 @@
 
 ### Prerequisites
 
-Ensure you have **Bash** installed. You can verify your Bash version with:
+Verify Bash version with:
 
 ```bash
 bash --version
@@ -35,7 +35,7 @@ or using `wget`:
 bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
 ```
 
-After installation, restart your shell:
+After installation, restart the shell:
 
 ```bash
 exec bash
@@ -47,7 +47,7 @@ exec bash
 
 ### Changing Themes
 
-Oh My Bash comes with multiple themes located in `~/.oh-my-bash/themes/`. You can list them using:
+Oh My Bash comes with multiple themes located in `~/.oh-my-bash/themes/`.
 
 ```bash
 ls ~/.oh-my-bash/themes/
@@ -166,7 +166,7 @@ function mkcd() {
 
 ### Updating Oh My Bash
 
-To update Oh My Bash to the latest version:
+To update to the latest version:
 
 ```bash
 git -C ~/.oh-my-bash pull
@@ -192,7 +192,7 @@ source ~/.bashrc
 
 ### Issue: Theme Not Changing
 
-Try restarting your shell:
+Try restarting the shell:
 
 ```bash
 exec bash
