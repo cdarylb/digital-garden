@@ -1,3 +1,4 @@
+```python
 import requests
 import time
 
@@ -16,11 +17,11 @@ def check_website(url):
         print(f"Response Time: {response_time} ms")
 
     except requests.exceptions.Timeout:
-        print("⚠️ Timeout: The server took too long to respond.")
+        print("Timeout: The server took too long to respond.")
     except requests.exceptions.ConnectionError:
-        print("❌ Connection Error: Site is DOWN or unreachable.")
+        print("Connection Error: Site is fucked or unreachable.")
     except Exception as e:
-        print(f"❗ Unexpected error: {e}")
+        print(f"Unexpected error: {e}")
 
 if __name__ == "__main__":
     check_website(URL)
